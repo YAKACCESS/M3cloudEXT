@@ -1,0 +1,21 @@
+{
+	"programModules": {},
+	"utilities": {
+		"@program@": {
+			"name": "@program@",
+			"sourceUuid": "@uuid@"
+		}
+	},
+	"sources": {
+		"@uuid@": {
+			"uuid": "@uuid@",
+			"updated": "@whenRemoveQuotes@",
+			"updatedBy": "@who@",
+			"created": "@createdRemoveQuotes@",
+			"createdBy": "@whoCreated@",
+			"apiVersion": "@version@",
+			"beVersion": "@beVersion@",
+			"code": "@code@"
+		}
+	}
+}
