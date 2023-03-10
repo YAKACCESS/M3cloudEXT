@@ -1,0 +1,426 @@
+metadataVersion: 1
+apis:
+  - name: EXT110MI
+    transactions:
+      - name: UpdRemark
+        program: EXT110MI
+        description: RMSDO interface to update Remark data in MMS100
+        type: SINGLE
+        outputs:
+          - name: TRNR
+            description: order number
+            length: 10
+            type: ALPHANUMERIC
+        inputs:
+          - name: CONO
+            description: company
+            length: 3
+            mandatory: false
+            type: NUMERIC
+          - name: TRNR
+            description: order number
+            length: 10
+            mandatory: true
+            type: ALPHANUMERIC
+          - name: REMK
+            description: remark
+            length: 30
+            mandatory: false
+            type: ALPHANUMERIC
+
+  - name: EXT120MI
+    transactions:
+      - name: PrintPckingNote
+        program: EXT120MI
+        description: Execute IPS service PrintPackingNote (method OIS620)
+        type: SINGLE
+        outputs:
+        - name: RETN
+          description: return message
+          length: 500
+          mandatory: false
+          type: ALPHANUMERIC
+        - name: CODE
+          description: return code
+          length: 3
+          mandatory: false
+          type: NUMERIC
+        inputs:
+        - name: CONO
+          description: company
+          length: 3
+          mandatory: false
+          type: NUMERIC
+        - name: DIVI
+          description: division
+          length: 3
+          mandatory: false
+          type: ALPHANUMERIC
+        - name: DLIX
+          description: delivery number
+          length: 11
+          mandatory: false
+          type: NUMERIC
+        - name: WHLO
+          description: warehouse
+          length: 3
+          mandatory: false
+          type: ALPHANUMERIC
+        - name: COPY
+          description: copy
+          length: 2
+          mandatory: false
+          type: NUMERIC
+        - name: ORNO
+          description: customer order number
+          length: 10
+          mandatory: false
+          type: ALPHANUMERIC
+        - name: DEBG
+          description: write debug files
+          length: 1
+          mandatory: false
+          type: NUMERIC
+
+      - name: PrintProforma
+        program: EXT120MI
+        description: Calls Print Pro Forma OIS640
+        type: SINGLE
+        outputs:
+        - name: RETN
+          description: return message
+          length: 500
+          mandatory: false
+          type: ALPHANUMERIC
+        - name: CODE
+          description: return code
+          length: 3
+          mandatory: false
+          type: NUMERIC
+        inputs:
+        - name: CONO
+          description: company
+          length: 3
+          mandatory: false
+          type: NUMERIC
+        - name: DIVI
+          description: division
+          length: 3
+          mandatory: false
+          type: ALPHANUMERIC
+        - name: DLIX
+          description: delivery number
+          length: 11
+          mandatory: false
+          type: NUMERIC
+        - name: PRBA
+          description: pro forma basis
+          length: 1
+          mandatory: true
+          type: NUMERIC
+        - name: COPY
+          description: copy
+          length: 2
+          mandatory: false
+          type: NUMERIC
+        - name: ORNO
+          description: customer order number
+          length: 10
+          mandatory: false
+          type: ALPHANUMERIC
+        - name: DEBG
+          description: write debug files
+          length: 1
+          mandatory: false
+          type: NUMERIC
+
+  - name: EXT410MI
+    transactions:
+      - name: UpdTrackingInfo
+        program: EXT410MI
+        description: Allows updating of Tracking Number and forwarding agent
+        type: SINGLE
+        inputs:
+          - name: CONO
+            description: company
+            length: 3
+            type: NUMERIC
+            mandatory: false
+          - name: INOU
+            description: direction
+            length: 1
+            type: NUMERIC
+            mandatory: false
+          - name: DLIX
+            description: delivery number
+            length: 11
+            type: NUMERIC
+            mandatory: true
+          - name: ETRN
+            description: external tracking number
+            length: 30
+            type: ALPHANUMERIC
+            mandatory: true
+          - name: FWNO
+            description: forwarding agent
+            length: 10
+            type: ALPHANUMERIC
+            mandatory: true
+          - name: MODF
+            description: final delivery method
+            length: 3
+            type: ALPHANUMERIC
+
+  - name: EXT610MI
+    transactions:
+      - name: ChgAddress
+        program: EXT610MI
+        description: This is the interface to the customer address file
+        type: SINGLE
+        outputs: []
+        inputs:
+        - name: CONO
+          description: company
+          length: 3
+          mandatory: false
+          type: NUMERIC
+        - name: DIVI
+          description: division
+          length: 3
+          mandatory: false
+          type: ALPHANUMERIC
+        - name: CUNO
+          description: customer
+          length: 10
+          mandatory: false
+          type: ALPHANUMERIC
+        - name: CUNM
+          description: name
+          length: 36
+          mandatory: false
+          type: ALPHANUMERIC
+        - name: ADRT
+          description: address type
+          length: 2
+          mandatory: false
+          type: NUMERIC
+        - name: ADID
+          description: address number
+          length: 6
+          mandatory: false
+          type: ALPHANUMERIC
+        - name: CUA1
+          description: address line 1
+          length: 36
+          mandatory: false
+          type: ALPHANUMERIC
+        - name: CUA2
+          description: address line 2
+          length: 36
+          mandatory: false
+          type: ALPHANUMERIC
+        - name: CUA3
+          description: address line 3
+          length: 36
+          mandatory: false
+          type: ALPHANUMERIC
+        - name: CUA4
+          description: address line 4
+          length: 36
+          mandatory: false
+          type: ALPHANUMERIC
+        - name: PONO
+          description: Postal code
+          length: 10
+          mandatory: false
+          type: ALPHANUMERIC
+        - name: ADVI
+          description: ship-via address
+          length: 6
+          mandatory: false
+          type: ALPHANUMERIC
+        - name: EALO
+          description: EAN location code
+          length: 13
+          mandatory: false
+          type: NUMERIC
+        - name: ECAR
+          description: state
+          length: 2
+          mandatory: false
+          type: ALPHANUMERIC
+        - name: RONO
+          description: run
+          length: 3
+          mandatory: false
+          type: ALPHANUMERIC
+        - name: DEPE
+          description: delivery period
+          length: 3
+          mandatory: false
+          type: NUMERIC
+        - name: MODL
+          description: delivery method
+          length: 3
+          mandatory: false
+          type: ALPHANUMERIC
+        - name: TEDL
+          description: delivery terms
+          length: 3
+          mandatory: false
+          type: ALPHANUMERIC
+        - name: TEL2
+          description: terms text
+          length: 36
+          mandatory: false
+          type: ALPHANUMERIC
+        - name: PHNO
+          description: telephone number 1
+          length: 16
+          mandatory: false
+          type: ALPHANUMERIC
+        - name: TFNO
+          description: facsimile transmission number
+          length: 16
+          mandatory: false
+          type: ALPHANUMERIC
+        - name: YREF
+          description: your reference 1
+          length: 30
+          mandatory: false
+          type: ALPHANUMERIC
+        - name: LSID
+          description: user
+          length: 8
+          mandatory: false
+          type: ALPHANUMERIC
+        - name: LSAD
+          description: address
+          length: 8
+          mandatory: false
+          type: ALPHANUMERIC
+        - name: MEAL
+          description: valid media
+          length: 10
+          mandatory: false
+          type: ALPHANUMERIC
+        - name: CSCD
+          description: country
+          length: 3
+          mandatory: false
+          type: ALPHANUMERIC
+        - name: VRNO
+          description: VAT registration number
+          length: 16
+          mandatory: false
+          type: ALPHANUMERIC
+        - name: EDES
+          description: place
+          length: 10
+          mandatory: false
+          type: ALPHANUMERIC
+        - name: ROUT
+          description: route
+          length: 6
+          mandatory: false
+          type: ALPHANUMERIC
+        - name: RODN
+          description: route departure
+          length: 3
+          mandatory: false
+          type: NUMERIC
+        - name: ULZO
+          description: unloading zone
+          length: 5
+          mandatory: false
+          type: ALPHANUMERIC
+        - name: CESA
+          description: marketing ID - M3 SMS
+          length: 32
+          mandatory: false
+          type: ALPHANUMERIC
+        - name: GEOC
+          description: geographical code
+          length: 9
+          mandatory: false
+          type: NUMERIC
+        - name: TAXC
+          description: tax code customer/address
+          length: 3
+          mandatory: false
+          type: ALPHANUMERIC
+        - name: HAFE
+          description: harbor or airport
+          length: 6
+          mandatory: false
+          type: ALPHANUMERIC
+        - name: EDE2
+          description: Place
+          length: 10
+          mandatory: false
+          type: ALPHANUMERIC
+        - name: TOWN
+          description: city
+          length: 20
+          mandatory: false
+          type: ALPHANUMERIC
+        - name: GEOX
+          description: geographic code X
+          length: 15
+          mandatory: false
+          type: NUMERIC
+        - name: GEOY
+          description: geographic code Y
+          length: 15
+          mandatory: false
+          type: NUMERIC
+        - name: GEOZ
+          description: geographic code  Z
+          length: 15
+          mandatory: false
+          type: NUMERIC
+        - name: FVDT
+          description: valid from
+          length: 8
+          mandatory: false
+          type: NUMERIC
+        - name: LVDT
+          description: valid to
+          length: 8
+          mandatory: false
+          type: NUMERIC
+        - name: FRCO
+          description: county ID
+          length: 7
+          mandatory: false
+          type: ALPHANUMERIC
+        - name: RASN
+          description: rail station
+          length: 10
+          mandatory: false
+          type: ALPHANUMERIC
+        - name: SPLE
+          description: standard point location code
+          length: 10
+          mandatory: false
+          type: ALPHANUMERIC
+        - name: PRIO
+          description: priority
+          length: 1
+          mandatory: false
+          type: NUMERIC
+        - name: ADCG
+          description: address category
+          length: 15
+          mandatory: false
+          type: ALPHANUMERIC
+        - name: CHNO
+          description: change number
+          length: 3
+          mandatory: false
+          type: NUMERIC
+        - name: SPLM
+          description: supply model
+          length: 8
+          mandatory: false
+          type: ALPHANUMERIC

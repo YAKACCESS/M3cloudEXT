@@ -1,0 +1,40 @@
+metadataVersion: 1
+apis:
+- name: EXT020MI
+  transactions:
+  - name: CrtReversePick
+    program: EXT020MI
+    description: Reverses RelForPick
+    type: SINGLE
+    inputs:
+    - name: CONO
+      description: company
+      length: 3
+      mandatory: False
+      type: NUMERIC
+    - name: DLIX
+      description: delivery number
+      length: 11
+      mandatory: False
+      type: NUMERIC
+    - name: PLSX
+      description: picking list suffix
+      length: 3
+      mandatory: False
+      type: NUMERIC
+    - name: WHLO
+      description: warehouse
+      length: 3
+      mandatory: False
+      type: ALPHANUMERIC
+    outputs:
+    - name: DLIX
+      description: delivery number
+      length: 11
+      mandatory: False
+      type: NUMERIC
+    - name: MESG
+      description: Return Message
+      length: 40
+      mandatory: False
+      type: ALPHANUMERIC

@@ -1,0 +1,137 @@
+{
+    "extends": "recommended",
+    "rules": {
+        "BlockEndsWithBlankLine": {
+            "enabled": false
+        },
+        "BlockStartsWithBlankLine": {
+            "enabled": false
+        },
+        "BuilderMethodWithSideEffects": {
+            "enabled": false
+        },
+        "ClassJavadoc": {
+            "enabled": false
+        },
+        "ClassSize": {
+            "enabled": false
+        },
+        "ClosureAsLastMethodParameter": {
+            "enabled": false
+        },
+        "CompileStatic": {
+            "enabled": false
+        },
+        "ConsecutiveBlankLines": {
+            "enabled": false
+        },
+        "DuplicateMapLiteral": {
+            "enabled": false
+        },
+        "DuplicateNumberLiteral": {
+            "enabled": false
+        },
+        "DuplicateStringLiteral": {
+            "enabled": false
+        },
+        "ExplicitCallToAndMethod": {
+            "enabled": false
+        },
+        "FactoryMethodName": {
+            "enabled": false
+        },
+        "Indentation": {
+            "enabled": false
+        },
+        "InvertedIfElse": {
+            "enabled": false
+        },
+        "LineLength": {
+            "enabled": false
+        },
+        "MethodCount": {
+            "enabled": false
+        },
+        "MethodName": {
+            "enabled": false
+        },
+        "MethodReturnTypeRequired": {
+            "enabled": false
+        },
+        "MethodSize": {
+            "enabled": false
+        },
+        "NoDef": {
+            "enabled": false
+        },
+        "NoDouble": {
+            "enabled": false
+        },
+        "NoTabCharacter": {
+            "enabled": false
+        },
+        "OptionalMethodParameter": {
+            "enabled": false
+        },
+        "ParameterCount": {
+            "enabled": false
+        },
+        "ParameterName": {
+            "enabled": false
+        },
+        "ParameterReassignment": {
+            "enabled": false
+        },
+        "PublicMethodsBeforeNonPublicMethods": {
+            "enabled": false
+        },
+        "ReturnsNullInsteadOfEmptyCollection": {
+            "enabled": false
+        },
+        "SpaceAfterClosingBrace": {
+            "enabled": false
+        },
+        "SpaceAfterMethodCallName": {
+            "enabled": false
+        },
+        "SpaceAfterMethodDeclarationName": {
+            "enabled": false
+        },
+        "TrailingWhitespace": {
+            "enabled": false
+        },
+        "UnnecessaryElseStatement": {
+            "enabled": false
+        },
+        "UnnecessaryGetter": {
+            "enabled": false
+        },
+        "UnnecessaryGroovyImport": {
+            "enabled": false
+        },
+        "UnnecessaryObjectReferences": {
+            "enabled": false
+        },
+        "UnnecessarySetter": {
+            "enabled": false
+        },
+        "UnnecessarySubstring": {
+            "enabled": false
+        },
+        "UnnecessaryToString": {
+            "enabled": false
+        },
+        "UnusedImport": {
+            "enabled": false
+        },
+        "UnusedVariable": {
+            "enabled": false
+        },
+        "VariableName": {
+            "enabled": false
+        },
+        "VariableTypeRequired": {
+            "enabled": false
+        }
+    }
+}
